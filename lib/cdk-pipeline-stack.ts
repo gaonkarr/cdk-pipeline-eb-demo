@@ -2,7 +2,7 @@ import { CodePipeline, CodePipelineSource, ShellStep } from 'aws-cdk-lib/pipelin
 import { Construct } from 'constructs';
 import {  Stack, StackProps } from 'aws-cdk-lib';
 
-//import { CdkEBStage } from './eb-stage';
+import { CdkEBStage } from './eb-stage';
 
 /**
  * The stack that defines the application pipeline
@@ -32,8 +32,8 @@ export class CdkPipelineStack extends Stack {
 
     // This is where we add the application stages
     // deploy beanstalk app
-    //const deploy = new CdkEBStage(this, 'Pre-Prod');
-    //const deployStage = pipeline.addStage(deploy); 
+    const deploy = new CdkEBStage(this, 'Pre-Prod');
+    const deployStage = pipeline.addStage(deploy); 
     
   }
 }
