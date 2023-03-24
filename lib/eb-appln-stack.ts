@@ -12,7 +12,7 @@ export class EBApplnStack extends cdk.Stack {
 
 // Construct an S3 asset from the ZIP located from directory up.
 const webAppZipArchive = new s3assets.Asset(this, 'WebAppZip', {
-      path: `${__dirname}/../my_webapp`,
+      path: `${__dirname}/../src`,
 });
 
 // Create a ElasticBeanStalk app.
