@@ -1,14 +1,20 @@
-# Welcome to your CDK TypeScript project
+## Deploy sample Node.js application and deploy it using AWS CDK 
 
-This is a blank project for CDK development with TypeScript.
+Sample code repo to create AWS Elastic Beanstalk application using AWS CDK and using CDK Pipelines to set up a CI/CD pipeline. It forms the base of the following tutorial(s):
+* [Build Infrastructure and CI/CD pipeline using AWS CDK and AWS Elastic Beanstalk](https://buildon.aws/tutorials/deploy-webapp-eb-cdk)
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
 
-## Useful commands
+This source code :
+- creates a simple non-containerized Node.js web application, and 
+- then uses AWS CDK to :
+    - package the web application source code
+    - create the deployment infrastructure (using AWS Elastic Beanstalk resources), and 
+    - create the CI/CD pipeline (using AWS CDK Pipelines).
 
-* `npm run build`   compile typescript to js
-* `npm run watch`   watch for changes and compile
-* `npm run test`    perform the jest unit tests
-* `cdk deploy`      deploy this stack to your default AWS account/region
-* `cdk diff`        compare deployed stack with current state
-* `cdk synth`       emits the synthesized CloudFormation template
+## Security
+
+See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more information.
+
+## License
+
+This library is licensed under the MIT-0 License. See the LICENSE file.
